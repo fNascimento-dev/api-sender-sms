@@ -1,0 +1,16 @@
+{
+    "messages": [
+      {
+        "sender": "InfoSMS",
+        "destinations": [
+          {
+            "to": "41793026727"
+          }
+        ],
+        "content": {
+          "text": "Ως Μεγαρικό ψήφισμα είνα…ι καθολικό εμπάργκο στα",
+          "transliteration": "GREEK"
+        }
+      }
+    ]
+  }

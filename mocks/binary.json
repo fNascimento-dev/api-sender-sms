@@ -1,0 +1,76 @@
+{
+    "messages": [
+      {
+        "sender": "InfoSMS",
+        "destinations": [
+          {
+            "to": "41793026727",
+            "messageId": "MESSAGE-ID-123-xyz"
+          },
+          {
+            "to": "41793026834"
+          }
+        ],
+        "content": {
+          "dataCoding": 0,
+          "esmClass": 0,
+          "hex": "54 65 73 74 20 6d 65 73 73 61 67 65 2e"
+        },
+        "options": {
+          "validityPeriod": {
+            "amount": 720,
+            "timeUnit": "HOURS"
+          }
+        },
+        "webhooks": {
+          "delivery": {
+            "url": "https://www.example.com/sms/advanced",
+            "intermediateReport": true
+          },
+          "contentType": "application/json",
+          "callbackData": "DLR callback data"
+        }
+      },
+      {
+        "sender": "41793026700",
+        "destinations": [
+          {
+            "to": "41793026700"
+          }
+        ],
+        "content": {
+          "dataCoding": 0,
+          "esmClass": 0,
+          "hex": "41 20 6C 6F 6E 67 20 74 …20 45 6D 70 69 72 65 2E"
+        },
+        "options": {
+          "deliveryTimeWindow": {
+            "days": [
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY",
+              "SUNDAY"
+            ],
+            "from": {
+              "hour": 6,
+              "minute": 0
+            },
+            "to": {
+              "hour": 15,
+              "minute": 30
+            }
+          },
+          "campaignReferenceId": "summersale"
+        }
+      }
+    ],
+    "options": {
+      "schedule": {
+        "bulkId": "BULK-ID-123-xyz",
+        "sendAt": "2021-08-23T14:00:00.000+0000"
+      }
+    }
+  }

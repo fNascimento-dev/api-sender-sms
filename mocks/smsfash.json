@@ -1,0 +1,18 @@
+{
+    "messages": [
+      {
+        "sender": "InfoSMS",
+        "destinations": [
+          {
+            "to": "41793026727"
+          }
+        ],
+        "content": {
+          "text": "Toto, I've got a feeling we're not in Kansas anymore."
+        },
+        "options": {
+          "flash": true
+        }
+      }
+    ]
+  }

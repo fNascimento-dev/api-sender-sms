@@ -1,0 +1,88 @@
+{
+    "messages": [
+      {
+        "sender": "InfoSMS",
+        "destinations": [
+          {
+            "to": "41793026727",
+            "messageId": "MESSAGE-ID-123-xyz"
+          },
+          {
+            "to": "41793026834"
+          }
+        ],
+        "content": {
+          "text": "Artık Ulusal Dil Tanımlayıcısı ile Türkçe karakterli smslerinizi rahatlıkla iletebilirsiniz.",
+          "transliteration": "TURKISH",
+          "language": {
+            "languageCode": "TR"
+          }
+        },
+        "options": {
+          "validityPeriod": {
+            "amount": 720,
+            "timeUnit": "HOURS"
+          },
+          "campaignReferenceId": "summersale"
+        },
+        "webhooks": {
+          "delivery": {
+            "url": "https://www.example.com/sms/advanced",
+            "intermediateReport": true
+          },
+          "contentType": "application/json",
+          "callbackData": "DLR callback data"
+        }
+      },
+      {
+        "sender": "41793026700",
+        "destinations": [
+          {
+            "to": "41793026700"
+          }
+        ],
+        "content": {
+          "text": "A long time ago, in a galaxy far, far away... It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire."
+        },
+        "options": {
+          "deliveryTimeWindow": {
+            "days": [
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY",
+              "SUNDAY"
+            ],
+            "from": {
+              "hour": 6,
+              "minute": 0
+            },
+            "to": {
+              "hour": 15,
+              "minute": 30
+            }
+          }
+        }
+      }
+    ],
+    "options": {
+      "schedule": {
+        "bulkId": "BULK-ID-123-xyz",
+        "sendAt": "2021-08-24T15:00:00.000+0000"
+      },
+      "tracking": {
+        "shortenUrl": true,
+        "trackClicks": true,
+        "trackingUrl": "https://example.com/click-report",
+        "removeProtocol": true,
+        "customDomain": "example.com"
+      },
+      "includeSmsCountInResponse": true,
+      "conversionTracking": {
+        "useConversionTracking": true,
+        "conversionTrackingName": "MY_CAMPAIGN"
+      }
+    }
+  }
