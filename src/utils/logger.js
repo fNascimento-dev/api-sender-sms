@@ -1,26 +1,26 @@
-const winston = require('winston')
-const path = require('path')
-require('dotenv').config()
+import { format as _format, createLogger, transports as _transports } from 'winston'
+import { join } from 'path'
+import 'dotenv/config';
 
 class LoggerConfig {
   constructor () {
-    this.loggerFormat = winston.format.printf(({ level, message, timestamp }) => {
+    this.loggerFormat = _format.printf(({ level, message, timestamp }) => {
       return `[${timestamp}] ${level}: ${message}`
     })
 
-    this.logger = winston.createLogger({
-      format: winston.format.combine(
-        winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+    this.logger = createLogger({
+      format: _format.combine(
+        _format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
         this.loggerFormat
       ),
       transports: [
-        new winston.transports.Console(),
-        new winston.transports.File({
-          filename: path.join(process.env.LOGS, 'error.log'),
+        new _transports.Console(),
+        new _transports.File({
+          filename: join(process.env.LOGS, 'error.log'),
           level: 'error',
           maxsize: 5 * 1024 * 1024,
-          format: winston.format.combine(
-            winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+          format: _format.combine(
+            _format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
             this.loggerFormat
           )
         })
@@ -41,4 +41,4 @@ class LoggerConfig {
   }
 }
 
-module.exports = new LoggerConfig()
+export default new LoggerConfig()
