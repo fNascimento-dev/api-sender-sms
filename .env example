@@ -1,0 +1,18 @@
+#RabbitMQ config
+RABBITMQ_HOST=localhost
+RABBITMQ_USER=imperial_topaz
+RABBITMQ_PASS=pass
+RABBITMQ_VHOST=bbts
+QUEUES=claro-0321,vivo-0320
+
+
+#Twilio config
+ACCOUNTSID=xxxx
+AUTHTOKEN=xxxx
+LA=+xxxx
+
+#Webhook
+WEBHOOK_SMS=xxxx
+
+#App config
+LOGS=./src/logs
